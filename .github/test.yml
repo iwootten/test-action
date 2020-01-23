@@ -9,7 +9,7 @@ on:
       - master
 
 jobs:
-  test-action-ref:
-      runs-on: ubuntu-latest
-      steps:
-        - run: echo "${{ github.event.pull_request.head.ref }}"
+  test-action:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ github.event.pull_request.head.ref }}"
