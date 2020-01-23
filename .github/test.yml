@@ -1,0 +1,14 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+  test-action-ref:
+      runs-on: ubuntu-latest
+      steps:
+        - run: echo "${{ github.event.pull_request.head.ref }}"
