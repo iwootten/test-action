@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Write sha
-        run: echo "${{ github.event.push.ref }}"
+        run: echo "${{ github.event.push.head }}"
