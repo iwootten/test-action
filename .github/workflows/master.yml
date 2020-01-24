@@ -10,4 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Write sha
-        run: echo "${{ github.event.push.head }}"
+        run: |
+          echo "$GITHUB_SHA"
+          printf "$GITHUB_SHA" > .application-version
+          cat .application-version
